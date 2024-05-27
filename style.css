@@ -1,0 +1,103 @@
+/* Basic styles */
+header h1 {
+  font-size: 45px; /* Adjust font size as desired */
+  margin-bottom: 10px; /* Add some margin for spacing */
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: #fff; /* White text for better visibility */
+  overflow: hidden; /* Prevent page scrolling */
+}
+
+/* Content overlay with black gradient */
+.content-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));
+  display: flex; /* Allow stacking content vertically */
+  flex-direction: column; /* Stack content top to bottom */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text within content */
+}
+
+/* Styles for headings, info, and button (already defined in previous code) */
+
+/* Header with animation (can be added here or in a separate animation file) */
+header.header {
+  background-color: transparent; /* Remove header background */
+  padding: 20px;
+  /* Add animation styles here */
+}
+
+/* Hero section */
+.hero {
+  padding: 40px;
+  text-align: left; /* Align text to the left */
+}
+
+.hero h2 {
+  margin-bottom: 10px; /* Add margin for better spacing */
+}
+
+/* Background Carousel */
+.background-carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; /* Prevent image overflow */
+}
+
+/* Responsive Background Image Height */
+@media (max-width: 768px) {
+  .background-carousel {
+    height: calc(100vw * (1080 / 1920)); /* Maintain aspect ratio on small screens */
+  }
+}
+
+/* Individual Background Images */
+.background-carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 1s ease-in-out; /* Smooth transition */
+}
+
+/* Styling the first image to be visible initially */
+.background-carousel img:nth-child(1) {
+  opacity: 1;
+}
+
+/* Hero button */
+.hero button {
+  background-color: #333; /* Adjust button color for better visibility */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: transform 0.2s ease, background-color 0.2s ease; /* Combine animations */
+}
+
+/* Content sections within the overlay */
+
+.content-overlay section {
+  max-width: 800px; /* Limit content width for better responsiveness */
+  margin: 20px auto; /* Add some margin for spacing */
+  padding: 20px; /* Add some padding for readability */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: #fff; /* White text for better visibility */
+  border-radius: 5px; /* Add rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
